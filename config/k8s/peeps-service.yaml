@@ -5,7 +5,7 @@ metadata:
 spec:
   containers:
     - name: peepsservice
-      image: equationalapplications/peeps-service:0.0.1
+      image: gentselimi/peeps-service:0.0.1
 
 ---
 apiVersion: v1
