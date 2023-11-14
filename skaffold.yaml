@@ -4,3 +4,31 @@ deploy:
   kubectl: 
     manifests:
       - ./config/k8s/*
+build:
+  local:
+    push: false
+  artifacts:
+    - image: gentselimi/birdsquawk
+      context: birdsquawk-service
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.js'
+            dest: .
+    - image: gentselimi/frontend
+      context: front-end
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: '**/*.js'
+            dest: .
+    - image: gentselimi/peeps-service
+      context: peeps-service
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.js'
+            dest: .
