@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: peeps-service-depl
+  name: query-service-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: peeps-service
+      app: query-service
   template:
     metadata:
       labels:
-        app: peeps-service
+        app: query-service
     spec:
       containers:
-       - name: peeps-service
-         image: gentselimi/peeps-service:latest
+       - name: query-service
+         image: gentselimi/queryservice:latest
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: peeps-service
+  name: query-service
 spec: 
   selector:
-    app: peeps
+    app: query
   ports:
-    - name: peeps
+    - name: query
       protocol: TCP
-      port: 5100
-      targetPort: 5100
+      port: 5200
+      targetPort: 5200
 
       

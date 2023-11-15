@@ -19,6 +19,6 @@ squawkData[id] = {id,title};
 
 });
 
-app.listen(5000, ()=> {
-    console.log("Birdsquawk is listening on port 5000")
+app.listen(5200, ()=> {
+    console.log("QueryService is listening on port 5200")
 })

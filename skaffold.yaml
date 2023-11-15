@@ -16,6 +16,14 @@ build:
         manual:
           - src: 'src/**/*.js'
             dest: .
+    - image: gentselimi/queryservice
+      context: query-service
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.js'
+            dest: .
     - image: gentselimi/frontend
       context: front-end
       docker:
