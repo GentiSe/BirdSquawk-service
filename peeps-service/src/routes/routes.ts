@@ -3,7 +3,7 @@ import express, {Request, Response} from 'express';
 
 const router = express.Router();
 
-router.get('/api/birdsquawk/get', (req, res) => {
+router.get('/api/peeps', (req, res) => {
     console.log("It's working")
     console.log("It's working 1")
     console.log("It's working 2")
@@ -13,7 +13,7 @@ router.get('/api/birdsquawk/get', (req, res) => {
 
 })
 
-router.post('/api/birdsquawk/post',(req,res)=> {
+router.post('/api/peeps',(req,res)=> {
 
 })
 

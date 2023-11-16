@@ -8,14 +8,14 @@ app.use(router);
 
 const Startup = async () => {
     try {
-        await mongoose.connect('mongodb://birdsquawk-mongo-service:27017/birdsquawk')
-        console.log("connected to mongoDB")
+        await mongoose.connect('mongodb://query-mongo-service:27017/query')
+        console.log("connected to QueryService mongoDB")
     } catch (error) {
         console.log(error)
     }
 
 app.listen(5200, ()=> {
-    console.log("Birdsquawk service listening on port 5000")
+    console.log("Query service listening on port 5200")
 })
 };
 

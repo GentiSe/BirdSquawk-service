@@ -3,3 +3,6 @@ front-end/node_modules
 front-end/.next
 query-service/node_modules
 peeps-service/node_modules
+birdsquawk/package-lock.json
+peeps-service/package-lock.json
+query-service/package-lock.json
